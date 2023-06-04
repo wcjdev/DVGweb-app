@@ -1,0 +1,54 @@
+div .formsdiv {
+ 
+ display:grid;
+  height: max-content;
+  padding: 2%;
+ 
+}
+
+a {
+  margin: auto;
+  width: auto;
+  height: auto;
+  padding: 2%;
+}
+input {
+  padding: auto;
+}
+
+form {
+  display:grid;
+
+  
+}
+fieldset {
+  /* min-height: min-content; */
+  max-width: min-content; 
+}
+
+.styleform label {
+  
+  
+  justify-self: center;
+}
+.styleform input {
+  margin-left: 200px;
+  align-self: inherit;
+  justify-self: inherit;
+
+}
+.styleform option {
+  margin-left: 200px;
+  align-self: inherit;
+  justify-self: inherit;
+
+} 
+.styleform select {
+  margin-left: 200px;
+  align-self: inherit;
+  justify-self: inherit;
+
+} this gives space for the label on the left/* this gives space for the label on the left */ /* this gives space for the label on the left */
+ .styleform .clear {
+  clear: both;
+} 

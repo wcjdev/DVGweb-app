@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://grateblobstorage0.blob.core.windows.net/web-pages/style/style1.css" />
+    <link rel="stylesheet" href="https://grateblobstorage0.blob.core.windows.net/web-pages/style/form-style.css" />
+    <link rel="stylesheet" href="https://grateblobstorage0.blob.core.windows.net/web-pages/style/rooms-style.css" />
+    <script>src="./Script"</script>
+
+
+
+    <title>Vector-Gallery</title>
+  </head>
+
+    <header class="formsdiv">
+
+        <a href="https://grateblobstorage0.blob.core.windows.net/web-pages/html/index.html"><button id="titlebtn">
+          <h1>DVG</h1>
+          <h3><i> Digital Vector Gallery</i></h3></button></a>
+
+
+        <nav>
+          <ul class="topnav">
+            <li><a href="https://grateblobstorage0.blob.core.windows.net/web-pages/html/index.html">Home</a></li>
+            <li>&nbsp</li>
+            <li><a href="https://grateblobstorage0.blob.core.windows.net/web-pages/html/galleryImages.html">Images</a></li>
+            <li>&nbsp</li>
+            <li><a href="./artistStudio.html">Artists</a></li>
+            <li>&nbsp</li>
+            <li><a href="./Repository/artistsden.html">Artists Den</a></li>
+            <li>&nbsp</li>
+            <li class="formsdiv"><a></a></li>
+            <li>&nbsp</li>
+            <li class="formsdiv hide"></li>
+          </ul>
+        </nav>
+
+      </header>
+      <body>
+
+   <main>
+<!-- TODO: move eventlistner for input outside imagefile display iteration and store array in local storage  -->
+
+    <div id="listing"></div>
+      <div>
+        <ul id="imageList">
+          
+        </ul>
+      </div>
+
+      <script referrerpolicy="same-origin">
+
+        function displayImages() {
+          const liEle = document.createElement("li");
+          const ulEle = document.querySelector("ul.imageList");
+
+          for (let i = 0; i < 8; i++) {
+						let container = `https://grateblobstorage0.blob.core.windows.net/gallery-vectors/vect${i}.svg`
+            let image = document.createElement('img');
+						image.src=container;
+						image.height=350;
+						image.width=350;
+						let li = document.createElement('li').innerHTML=image;
+						document.getElementById('imageList').append(li);
+          }
+            
+            
+        }
+				displayImages();
+      </script>
+
+
+
+ 
+  </main>
+  </body>
+
+  <footer class="formsdiv">
+    <h3>DVG- about NFTs </h3>
+  </footer>
+</html>

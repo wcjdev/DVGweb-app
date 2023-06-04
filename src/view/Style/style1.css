@@ -1,0 +1,124 @@
+@import "https://grateblobstorage0.blob.core.windows.net/web-pages/style/grid-style.css";
+
+html {
+  background-color: rgb(2, 2, 46);
+  
+}
+body {
+  
+  margin: 0 8% 0;
+  padding: 3%;
+  
+  background-color: rgb(54, 54, 43, 0.65);
+}
+img {
+  
+  border: transparent 1px ridge;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+ 
+  /* background-color: rgba(54, 0, 5, 0.267); */
+	background-color: white;
+}
+ ol{
+  block-size: inherit;
+  background-color: rgba(0, 25, 26, 0.123);
+  
+ }
+
+img:hover {
+  transition-delay: 1000ms;
+
+  width: 500px;
+  height: 500px;
+}
+
+.imageList {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0 10px;
+  text-align: center;
+}
+.topnav{
+  block-size: inherit;
+  background-color:inherit;
+  list-style-type: none;
+  display: flex;
+}
+nav li {
+  color: rgba(0, 35, 65, 0.336);
+
+  padding: 10px;
+}
+a {
+  
+  color: rgba(24, 196, 116, 0.26);
+  text-shadow: rgba(110, 104, 95, 0.548) 15px;
+  padding: 5px;
+  font-size: x-large;
+  text-decoration:double;
+  
+}
+a button#titlebtn{
+  color:black;
+  background-color: transparent;
+  display:flex;
+ 
+  border:none;
+  text-align: left;
+  margin-left:20px;
+}
+
+header {
+  display: flex;
+  align-content: space-between;
+  border-bottom: rgb(120, 128, 131) 5px ridge;
+  padding: 0 30px;
+  margin:auto;
+}
+footer {
+ display:block;
+
+
+  
+  padding: 0 30px;
+  margin:auto;
+
+}
+
+.topList {
+  block-size:auto;
+  background-color:transparent;
+  list-style-type: none;
+  display: inline-flex;
+  text-align: left;
+}
+
+main>div.row2{
+  display:grid;
+  
+}
+main{
+  display: grid;
+}
+
+
+main>img{
+  text-align: center;
+  display: flex;
+  align-content: space-between;
+  
+  padding: 0 30px;
+  margin:auto;
+}
+main.main{
+  display: grid;
+  column-count: 1 2 3;
+  column-width: 300px;
+}
+main>form{
+  width:min-content 300px;
+  align-content: space-around;
+  margin:auto;
+}

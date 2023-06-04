@@ -1,0 +1,26 @@
+img:hover {
+  transition-delay: 1000;
+
+  width: 500px;
+  height: 500px;
+}
+
+img {
+  background-color: rgba(7, 48, 45, 0.37);
+  border: #646d9b 7px ridge;
+  border-radius: 5px;
+ 
+}
+main.main{
+  border-color: antiquewhite;
+}
+.showpiece{
+
+  background-color: cornsilk;
+  
+  transition-delay: (continue);
+}
+.showpiece:hover{
+  width:inherit;
+  height:inherit;
+}

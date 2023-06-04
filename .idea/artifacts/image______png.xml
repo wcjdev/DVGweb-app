@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jlink" name="image${**}.png">
+    <output-path>$PROJECT_DIR$/out/artifacts/image______png</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/../../../Images/Project Pictures/hEAD" />
+      <element id="directory" name="gallery" />
+    </root>
+  </artifact>
+</component>
