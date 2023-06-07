@@ -27,7 +27,6 @@
         <li><a href="https://grateblobstorage0.blob.core.windows.net/web-pages/html/galleryVectors.html">Vectors</a></li>
         <li>&nbsp</li>
 
-        <li class="formsdiv"></li>
         </ul>
     </nav>
 
@@ -36,6 +35,12 @@
 
  <body class='App'>
 	 <main class='App-header'>
+         <ul>
+             <li class="formsdiv"></li>
+             <li id="login"><button @click=""><a>Login</a></button></li>
+             <li class="formsdiv"></li>
+             <li id="newaccountid"><button id="createbutt" @click="newAccount">New Studio</button></li>
+         </ul>
 		 <div class='App-header' >
       <ul class='app-header app-logo' id="imageList" style='background-color:transparent'>
 
@@ -44,21 +49,16 @@
     <script referrerpolicy='same-origin' >
 
       function displayImages() {
-       
 
-      
           let container = `https://grateblobstorage0.blob.core.windows.net/gallery-vectors/vect0.svg`;
           let image=document.createElement('img');
 					image.src=container;
-				
-					
+
 					image.style.border='none';
-					
-				
-					image.id='bg-color';
-					
+	            	image.id='bg-color';
 					image.height=600;
 					image.width=600;
+					
 					let li=document.createElement('li').innerHTML=image;
 					document.getElementById('imageList').append(li);
         
@@ -80,6 +80,38 @@
 
 <div class="gridcontainer" id="col2"></div>
 </footer>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+ const LoginForm = `
 
+            <div class="clear styleform" form-login">
+            <form class="clear" action="/form.data" id="loginform" name="logform">
+            <fieldset class="clear" >
+            <legend class="clear"><h3>User Login:</h3></legend>
+
+            <label class="clear">User Name</label>
+            <input class="clear" type="text" name="userName" id="loginName">
+            <label class="clear">User Email</label>
+            <input class="clear" type="text" name="userEmail" id="loginEmail">
+
+            </br>
+            <label class="clear"for="submit"></label>
+            <input class="clear" type="submitlog" name="submit" id="submitlog" value="submit" placeholder="Submit" >
+            </fieldset>
+            </form>`
+
+
+    const app = Vue.createApp({
+           data():()=>{
+
+           return {
+            LoginForm
+           }
+
+            }
+
+     app.mount('#formtempid')
+
+</script>
 
 </html>

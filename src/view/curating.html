@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style1.css" >
-   <link rel="stylesheet" href="../style/form-style.css">
-    <link rel="stylesheet" href="../style/rooms-style.css" >
-    <link rel="stylesheet" href="../style/grid-style.css">
-    <script src="/ScriptJs/fetchUploadFiles.mjs" ref="cross-origin"></script>
-   
-   
-    <script src="./repository/curating.mjs" ref="cross-origin"></script>
-    
+    <link rel="stylesheet" href="https://grateblobstorage0.blob.core.windows.net/web-pages/style/style1.css" >
+   <link rel="stylesheet" href="https://grateblobstorage0.blob.core.windows.net/web-pages/style/form-style.css">
+    <link rel="stylesheet" href="https://grateblobstorage0.blob.core.windows.net/web-pages/style/rooms-style.css" >
+    <link rel="stylesheet" href="https://grateblobstorage0.blob.core.windows.net/web-pages/style/grid-style.css">
+
 
     
     <title>Curating Private Collections</title>
@@ -25,11 +21,11 @@
         <h3><i> Digital Vector Gallery</i></h3></button></a>
     <nav>
       <ul class="topnav">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="https://grateblobstorage0.blob.core.windows.net/web-pages/html/index.html">Home</a></li>
         <li>&nbsp</li>
-        <li><a href="../formsArt.html">Artists</a></li>
+        <li><a href="https://grateblobstorage0.blob.core.windows.net/web-pages/html/galleryImages.html">Images</a></li>
         <li>&nbsp</li>
-        <li><a href="../forms.html">Collectors</a></li>
+        <li><a href="https://grateblobstorage0.blob.core.windows.net/web-pages/html/galleryVectors.html">Vectors</a></li>
         
         </ul>
     </nav>
@@ -105,7 +101,7 @@
 </script>
 	
 	
-	<div class="row3" hidden="true" id="tableResult">
+	<div class="row3" hidden="false" id="tableResult">
     	  
 	
 	<table class="tabletemp">
@@ -169,5 +165,16 @@ s.oninput=getUploadFiles();
     btn.onclick=saveUploadDir();
  
  </script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+
+    const app = Vue.createApp({
+        data(){
+            return{
+
+            })
+     app.mount('#app')
+
+</script>
 </body>
 </html>
