@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style1.css" >
+   <link rel="stylesheet" href="../style/form-style.css">
+    <link rel="stylesheet" href="../style/rooms-style.css" >
+    <link rel="stylesheet" href="../style/grid-style.css">
+    <script src="/ScriptJs/fetchUploadFiles.mjs" ref="cross-origin"></script>
+   
+   
+    <script src="./repository/curating.mjs" ref="cross-origin"></script>
+    
+
+    
+    <title>Curating Private Collections</title>
+
+</head>
+<body>
+<header>
+    <a href="../index.html"><button id="titlebtn">
+        <h1>DVG</h1>
+        <h3><i> Digital Vector Gallery</i></h3></button></a>
+    <nav>
+      <ul class="topnav">
+        <li><a href="../index.html">Home</a></li>
+        <li>&nbsp</li>
+        <li><a href="../formsArt.html">Artists</a></li>
+        <li>&nbsp</li>
+        <li><a href="../forms.html">Collectors</a></li>
+        
+        </ul>
+    </nav>
+  </header>
+  
+    <main class="main row2 col1 col2 col3 col4">
+
+        <!-- List for displaying uploaded files -->
+
+
+        <div class="row2 col1" id="diruploadResult"> 
+  
+            <ol id="directorylist">
+            
+            </ol>
+           
+           </div>
+
+           <!-- Directory Upload Form -->
+
+           <div class="row2 col2" >
+
+        <form name="filesoptions" id="foptionsId" >
+            <fieldset name="optionfieldset">
+            
+                <legend class="clear" name="foptleg">Upload Collection Folder</legend>
+        </br>
+            <label for="dirInputId">Select Folder</label> </br>
+            <input type="file" id="dirInputId" webkitdirectory multiple onchange="getUploadDirectory()"> </br>
+            </br>
+            <label for="foldername">Enter Collection Name</label> </br>
+            <input type="text" name="collectionDir" id="foldername" placeholder="collection" value="collection"> </br>
+        </br>
+            <label for="saveBtn"></label> </br>
+            <input type="button" name="butt" id="saveBtn" value="Save" onclick="saveUploadDir()">
+            </fieldset>
+        </form>
+    </div>
+    
+        <!-- list for displaying upload info or thumbnails -->
+
+    <div class="row2 col3"  id="fileuploadResult"> 
+  
+        <ol id="fileslist">
+      
+        </ol>
+        </div>
+    <!-- File Upload Select and drag forms -->
+
+    
+ 
+	<div class="row2 col4"  id="dragselectUpload">
+		<form name="selectFormName" id="selectFileId">
+
+          <fieldset name="selectFieldSetName">
+            <legend class="clear" name="selectLegName">Select Image Files</legend>
+          </br>
+            <label for="draganddropId"></label>
+      
+            <p class="toplist"  id="draganddropId" name="dropArea" style="outline: darkgray 1px  dashed; width:auto; height:60px; background-color: rgba(0, 51, 0, 0.178);"></br>png/jpeg/svg/json</p>
+             
+                        
+            <label class="clear hidden" for="uploadInputId"></br>or:</br></label>
+            <input id="uploadInputId" type="file" multiple  >
+          </br>
+                               
+        
+        </fieldset>
+        </form> 
+    
+</div >
+      
+</script>
+	
+	
+	<div class="row3" hidden="true" id="tableResult">
+    	  
+	
+	<table class="tabletemp">
+            <thead>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Source</th>
+                <th>Alt</th>
+                <th>Type</th>
+                <th>File</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>i+=1</td>
+                    <td>fileList[i].title</td>
+                    <td>fileList[i].src</td>
+                    <td>fileList[i].alt</td>
+                    <td>fileList[i].type</td>
+                    <td>fileList[i].file</td>
+                </tr>
+            </tbody>
+        </table>
+		
+    </div>
+       
+       </main>
+    <footer class="formsdiv">
+<div>NFTs</div>
+    </footer>
+<script src="../ScriptJs/getUploadFiles.mjs">
+
+
+let s =document.getElementById('uploadInputId');
+s.addEventListener('input', getUploadFiles);
+
+s.oninput=getUploadFiles();
+   
+
+ </script>
+ <script src="../ScriptJs/getUploadDirectory.mjs">
+
+    let b=document.getElementById('dirInputId');
+    b.addEventListener('input', getUploadDirectory);
+
+    b.onchange=getUploadDirectory();
+
+ </script>
+ <script src="../ScriptJs/saveUploads.mjs">
+
+    let btn = document.getElementById('saveBtn');
+    btn.addEventListener('click', saveUploadFiles);
+
+    btn.onclick=saveUploadFiles()
+ 
+ </script>
+ <script src="../ScriptJs/saveUploads.mjs">
+
+    let btn = document.getElementById('saveBtn1');
+    btn.addEventListener('click', saveUploadsDir);
+
+    btn.onclick=saveUploadDir();
+ 
+ </script>
+</body>
+</html>
